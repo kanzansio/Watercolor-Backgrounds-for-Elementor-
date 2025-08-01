@@ -1,4 +1,4 @@
-/* Watercolor Backgrounds for Elementor - CSS */
+/* Watercolor Backgrounds for Elementor v1.2 - CSS */
 
 /* Estilos base para elementos con fondo de acuarela */
 .watercolor-bg-element {
@@ -6,34 +6,172 @@
     isolation: isolate;
 }
 
-/* Animación sutil para dar vida al efecto */
-.watercolor-bg-element:before,
-.watercolor-bg-element:after {
-    animation: watercolor-float 20s ease-in-out infinite alternate;
+/* Animación orgánica más sutil */
+.watercolor-bg-element:before {
+    animation: watercolor-organic 30s ease-in-out infinite;
 }
 
-/* Keyframes para la animación flotante */
-@keyframes watercolor-float {
-    0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
+/* Keyframes optimizados para mejor rendimiento */
+@keyframes watercolor-organic {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
     }
     25% {
-        transform: translate(1%, -0.5%) rotate(0.5deg) scale(1.02);
+        transform: translate(0.5%, -0.2%) scale(1.01);
+        opacity: 0.7;
     }
     50% {
-        transform: translate(-0.5%, 1%) rotate(-0.3deg) scale(0.98);
+        transform: translate(-0.3%, 0.3%) scale(0.99);
+        opacity: 0.9;
     }
     75% {
-        transform: translate(0.8%, 0.3%) rotate(0.2deg) scale(1.01);
-    }
-    100% {
-        transform: translate(-0.3%, -0.8%) rotate(-0.1deg) scale(0.99);
+        transform: translate(0.2%, -0.1%) scale(1.005);
+        opacity: 0.75;
     }
 }
 
-/* Pausa la animación al hacer hover para mejor experiencia */
-.watercolor-bg-element:hover:before,
-.watercolor-bg-element:hover:after {
+/* Pausar animación al hacer hover */
+.watercolor-bg-element:hover:before {
+    animation-play-state: paused;
+}
+
+/* Z-index para contenido */
+.watercolor-bg-element .elementor-container,
+.watercolor-bg-element .elementor-column-wrap,
+.watercolor-bg-element .elementor-widget-wrap,
+.watercolor-bg-element .elementor-widget-container {
+    position: relative;
+    z-index: 3;
+}
+
+/* Optimizaciones para dispositivos móviles */
+@media (max-width: 768px) {
+    .watercolor-bg-element:before {
+        animation-duration: 45s;
+        will-change: transform, opacity;
+    }
+    
+    /* Reducir efectos en móviles */
+    .watercolor-bg-element:before {
+        filter: blur(10px) contrast(1.5) !important;
+    }
+}
+
+/* Tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .watercolor-bg-element:before {
+        animation-duration: 35s;
+    }
+}
+
+/* Respeto por preferencias de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .watercolor-bg-element:before {
+        animation: none !important;
+        opacity: 0.7 !important;
+        transform: none !important;
+    }
+}
+
+/* Modo oscuro del navegador */
+@media (prefers-color-scheme: dark) {
+    .watercolor-bg-element {
+        /* Ajustes para modo oscuro si es necesario */
+    }
+}
+
+/* Optimización para impresión */
+@media print {
+    .watercolor-bg-element:before {
+        display: none !important;
+    }
+    
+    .watercolor-bg-element {
+        background: white !important;
+    }
+}
+
+/* Compatibilidad con Elementor Container flexbox */
+.watercolor-bg-element.e-con {
+    overflow: hidden;
+}
+
+.watercolor-bg-element.e-con > .e-con-inner {
+    position: relative;
+    z-index: 2;
+}
+
+/* Compatibilidad con Grid Container */
+.watercolor-bg-element.e-grid {
+    overflow: hidden;
+}
+
+.watercolor-bg-element.e-grid > .e-grid-item {
+    position: relative;
+    z-index: 2;
+}
+
+/* Mejoras de rendimiento */
+.watercolor-bg-element:before {
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform3d: translateZ(0);
+    -webkit-transform3d: translateZ(0);
+}
+
+/* Soporte para high-DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .watercolor-bg-element:before {
+        /* Ajustes para pantallas retina si es necesario */
+    }
+}
+
+/* Fallback para navegadores más antiguos */
+.no-css-filters .watercolor-bg-element:before {
+    display: none;
+}
+
+/* Utilidades adicionales */
+.watercolor-bg-element.watercolor-paused:before {
+    animation-play-state: paused !important;
+}
+
+.watercolor-bg-element.watercolor-hidden:before {
+    opacity: 0 !important;
+}color-organic 30s ease-in-out infinite;
+}
+
+/* Keyframes más orgánicos y sutiles */
+@keyframes watercolor-organic {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+    }
+    20% {
+        transform: translate(1%, -0.3%) scale(1.01);
+        opacity: 0.7;
+    }
+    40% {
+        transform: translate(-0.2%, 0.5%) scale(0.99);
+        opacity: 0.9;
+    }
+    60% {
+        transform: translate(0.3%, -0.1%) scale(1.02);
+        opacity: 0.6;
+    }
+    80% {
+        transform: translate(-0.1%, 0.2%) scale(0.98);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+    }
+}
+
+/* Pausa la animación al hacer hover */
+.watercolor-bg-element:hover:before {
     animation-play-state: paused;
 }
 
@@ -46,27 +184,46 @@
     z-index: 3;
 }
 
-/* Responsive: Reducir intensidad en móviles para mejor rendimiento */
+/* Responsive: Reducir intensidad en móviles */
 @media (max-width: 768px) {
-    .watercolor-bg-element:before,
-    .watercolor-bg-element:after {
-        animation-duration: 30s;
-        will-change: transform;
+    .watercolor-bg-element:before {
+        animation-duration: 45s;
+        will-change: transform, opacity;
+    }
+    
+    /* Reducir blur en móviles para mejor rendimiento */
+    .watercolor-bg-element:before {
+        filter: blur(10px) contrast(1.5) !important;
     }
 }
 
-/* Modo de alto contraste - deshabilitar efectos */
+/* Reducir efectos para usuarios que prefieren menos movimiento */
 @media (prefers-reduced-motion: reduce) {
-    .watercolor-bg-element:before,
-    .watercolor-bg-element:after {
+    .watercolor-bg-element:before {
         animation: none;
+        opacity: 0.7 !important;
     }
 }
 
 /* Optimización para impresión */
 @media print {
-    .watercolor-bg-element:before,
-    .watercolor-bg-element:after {
+    .watercolor-bg-element:before {
         display: none;
     }
+}
+
+/* Mejoras para el contraste y legibilidad */
+.watercolor-bg-element {
+    /* Asegurar que el texto sea legible sobre el fondo */
+    color: inherit;
+}
+
+/* Variante para fondos muy claros */
+.watercolor-bg-element[data-bg-type="light"] {
+    color: #333;
+}
+
+/* Variante para fondos oscuros */
+.watercolor-bg-element[data-bg-type="dark"] {
+    color: #fff;
 }
