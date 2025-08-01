@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: Watercolor Backgrounds for Elementor
- * Plugin URI: https://tu-sitio.com
+ * Plugin URI: https://kanzansio.digital/
  * Description: Añade fondos de acuarela personalizables a los contenedores de Elementor
  * Version: 1.0.0
- * Author: Tu Nombre
+ * Author: Kanzansio.Digital
  * Text Domain: watercolor-bg
  * Domain Path: /languages
  */
