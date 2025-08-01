@@ -1,0 +1,72 @@
+/* Watercolor Backgrounds for Elementor - CSS */
+
+/* Estilos base para elementos con fondo de acuarela */
+.watercolor-bg-element {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Animación sutil para dar vida al efecto */
+.watercolor-bg-element:before,
+.watercolor-bg-element:after {
+    animation: watercolor-float 20s ease-in-out infinite alternate;
+}
+
+/* Keyframes para la animación flotante */
+@keyframes watercolor-float {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translate(1%, -0.5%) rotate(0.5deg) scale(1.02);
+    }
+    50% {
+        transform: translate(-0.5%, 1%) rotate(-0.3deg) scale(0.98);
+    }
+    75% {
+        transform: translate(0.8%, 0.3%) rotate(0.2deg) scale(1.01);
+    }
+    100% {
+        transform: translate(-0.3%, -0.8%) rotate(-0.1deg) scale(0.99);
+    }
+}
+
+/* Pausa la animación al hacer hover para mejor experiencia */
+.watercolor-bg-element:hover:before,
+.watercolor-bg-element:hover:after {
+    animation-play-state: paused;
+}
+
+/* Asegurar que el contenido esté por encima del fondo */
+.watercolor-bg-element .elementor-container,
+.watercolor-bg-element .elementor-column-wrap,
+.watercolor-bg-element .elementor-widget-wrap,
+.watercolor-bg-element .elementor-widget-container {
+    position: relative;
+    z-index: 3;
+}
+
+/* Responsive: Reducir intensidad en móviles para mejor rendimiento */
+@media (max-width: 768px) {
+    .watercolor-bg-element:before,
+    .watercolor-bg-element:after {
+        animation-duration: 30s;
+        will-change: transform;
+    }
+}
+
+/* Modo de alto contraste - deshabilitar efectos */
+@media (prefers-reduced-motion: reduce) {
+    .watercolor-bg-element:before,
+    .watercolor-bg-element:after {
+        animation: none;
+    }
+}
+
+/* Optimización para impresión */
+@media print {
+    .watercolor-bg-element:before,
+    .watercolor-bg-element:after {
+        display: none;
+    }
+}
