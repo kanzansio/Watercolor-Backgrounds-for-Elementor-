@@ -304,7 +304,7 @@ new WatercolorBackgroundPlugin();
 register_activation_hook(__FILE__, 'watercolor_bg_activate');
 function watercolor_bg_activate() {
     // Verificar si Elementor está instalado
-    if (!is_plugin_active('elementor/elementor.php')) {
+    if (!did_action('elementor/loaded')) {
         deactivate_plugins(plugin_basename(__FILE__));
         wp_die(__('Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero.', 'watercolor-bg'));
     }
