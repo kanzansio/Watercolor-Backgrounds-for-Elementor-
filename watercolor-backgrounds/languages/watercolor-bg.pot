@@ -1,0 +1,73 @@
+# Copyright (C) 2025 Watercolor Backgrounds for Elementor
+# This file is distributed under the same license as the Watercolor Backgrounds for Elementor package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Watercolor Backgrounds for Elementor 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/watercolor-backgrounds\n"
+"POT-Creation-Date: 2025-01-01 12:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: watercolor-backgrounds.php:84
+msgid "Fondo de Acuarela"
+msgstr ""
+
+#: watercolor-backgrounds.php:91
+msgid "Activar Fondo de Acuarela"
+msgstr ""
+
+#: watercolor-backgrounds.php:93
+msgid "Sí"
+msgstr ""
+
+#: watercolor-backgrounds.php:94
+msgid "No"
+msgstr ""
+
+#: watercolor-backgrounds.php:103
+msgid "Color de Fondo Base"
+msgstr ""
+
+#: watercolor-backgrounds.php:114
+msgid "Color de Mancha 1"
+msgstr ""
+
+#: watercolor-backgrounds.php:125
+msgid "Color de Mancha 2"
+msgstr ""
+
+#: watercolor-backgrounds.php:136
+msgid "Color de Mancha 3"
+msgstr ""
+
+#: watercolor-backgrounds.php:147
+msgid "Opacidad de Manchas"
+msgstr ""
+
+#: watercolor-backgrounds.php:164
+msgid "Intensidad del Efecto"
+msgstr ""
+
+#: watercolor-backgrounds.php:168
+msgid "Suave"
+msgstr ""
+
+#: watercolor-backgrounds.php:169
+msgid "Medio"
+msgstr ""
+
+#: watercolor-backgrounds.php:170
+msgid "Intenso"
+msgstr ""
+
+#: watercolor-backgrounds.php:309
+msgid "Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero."
+msgstr ""
+
+#: watercolor-backgrounds.php:315
+msgid "Configurar en Elementor"
+msgstr ""

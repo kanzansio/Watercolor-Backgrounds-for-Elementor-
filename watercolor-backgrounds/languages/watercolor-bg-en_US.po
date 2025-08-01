@@ -1,0 +1,77 @@
+# English translation for Watercolor Backgrounds for Elementor
+# Copyright (C) 2025 Watercolor Backgrounds for Elementor
+# This file is distributed under the same license as the Watercolor Backgrounds for Elementor package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Watercolor Backgrounds for Elementor 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/watercolor-backgrounds\n"
+"POT-Creation-Date: 2025-01-01 12:00+0000\n"
+"PO-Revision-Date: 2025-01-01 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: watercolor-backgrounds.php:84
+msgid "Fondo de Acuarela"
+msgstr "Watercolor Background"
+
+#: watercolor-backgrounds.php:91
+msgid "Activar Fondo de Acuarela"
+msgstr "Enable Watercolor Background"
+
+#: watercolor-backgrounds.php:93
+msgid "Sí"
+msgstr "Yes"
+
+#: watercolor-backgrounds.php:94
+msgid "No"
+msgstr "No"
+
+#: watercolor-backgrounds.php:103
+msgid "Color de Fondo Base"
+msgstr "Base Background Color"
+
+#: watercolor-backgrounds.php:114
+msgid "Color de Mancha 1"
+msgstr "Watercolor Spot 1"
+
+#: watercolor-backgrounds.php:125
+msgid "Color de Mancha 2"
+msgstr "Watercolor Spot 2"
+
+#: watercolor-backgrounds.php:136
+msgid "Color de Mancha 3"
+msgstr "Watercolor Spot 3"
+
+#: watercolor-backgrounds.php:147
+msgid "Opacidad de Manchas"
+msgstr "Spots Opacity"
+
+#: watercolor-backgrounds.php:164
+msgid "Intensidad del Efecto"
+msgstr "Effect Intensity"
+
+#: watercolor-backgrounds.php:168
+msgid "Suave"
+msgstr "Light"
+
+#: watercolor-backgrounds.php:169
+msgid "Medio"
+msgstr "Medium"
+
+#: watercolor-backgrounds.php:170
+msgid "Intenso"
+msgstr "Strong"
+
+#: watercolor-backgrounds.php:309
+msgid "Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero."
+msgstr "This plugin requires Elementor to work. Please install and activate Elementor first."
+
+#: watercolor-backgrounds.php:315
+msgid "Configurar en Elementor"
+msgstr "Configure in Elementor"
