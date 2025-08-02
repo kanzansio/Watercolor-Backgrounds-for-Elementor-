@@ -3,7 +3,7 @@
  * Plugin Name: Watercolor Backgrounds for Elementor
  * Plugin URI: https://kanzansio.digital/
  * Description: Fondos de acuarela animados para Elementor 
- * Version: 3.0.0
+ * Version: 3.0.1
  * Author: Kanzansio.Digital
  * Text Domain: watercolor-bg
  * Domain Path: /languages
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Definir constantes del plugin
-define('WATERCOLOR_BG_VERSION', '3.0.0');
+define('WATERCOLOR_BG_VERSION', '3.0.1');
 define('WATERCOLOR_BG_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('WATERCOLOR_BG_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('WATERCOLOR_BG_MINIMUM_ELEMENTOR_VERSION', '3.0.0');
@@ -53,7 +53,7 @@ final class WatercolorBackgroundPlugin {
         }
 
         // Check for required Elementor version
-        if (!version_compare(ELEMENTOR_VERSION, WATERCOLOR_BG_MINIMUM_ELEMENTOR_VERSION, '>=')) {
+        if (!defined('ELEMENTOR_VERSION') || !version_compare(ELEMENTOR_VERSION, WATERCOLOR_BG_MINIMUM_ELEMENTOR_VERSION, '>=')) {
             add_action('admin_notices', array($this, 'admin_notice_minimum_elementor_version'));
             return false;
         }
@@ -138,6 +138,11 @@ final class WatercolorBackgroundPlugin {
     }
 
     public function register_watercolor_controls($element, $args) {
+        // Use Controls_Manager constant to avoid errors
+        if (!class_exists('\Elementor\Controls_Manager')) {
+            return;
+        }
+
         $element->add_control(
             'watercolor_divider',
             array(
@@ -149,7 +154,7 @@ final class WatercolorBackgroundPlugin {
         $element->add_control(
             'watercolor_heading',
             array(
-                'label' => esc_html__('🎨 Fondo de Acuarela', 'watercolor-bg'),
+                'label' => esc_html__('Fondo de Acuarela', 'watercolor-bg'),
                 'type' => \Elementor\Controls_Manager::HEADING,
             )
         );
@@ -177,8 +182,8 @@ final class WatercolorBackgroundPlugin {
                 'type' => \Elementor\Controls_Manager::SELECT,
                 'default' => 'acuarela',
                 'options' => array(
-                    'acuarela' => esc_html__('💧 Acuarela', 'watercolor-bg'),
-                    'barrido' => esc_html__('🌊 Barrido', 'watercolor-bg'),
+                    'acuarela' => esc_html__('Acuarela', 'watercolor-bg'),
+                    'barrido' => esc_html__('Barrido', 'watercolor-bg'),
                 ),
                 'condition' => array(
                     'watercolor_enable' => 'yes',
@@ -192,7 +197,7 @@ final class WatercolorBackgroundPlugin {
         $element->add_control(
             'watercolor_colors_heading',
             array(
-                'label' => esc_html__('🎨 Colores', 'watercolor-bg'),
+                'label' => esc_html__('Colores', 'watercolor-bg'),
                 'type' => \Elementor\Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => array(
@@ -250,7 +255,7 @@ final class WatercolorBackgroundPlugin {
         $element->add_control(
             'watercolor_settings_heading',
             array(
-                'label' => esc_html__('⚙️ Configuración', 'watercolor-bg'),
+                'label' => esc_html__('Configuración', 'watercolor-bg'),
                 'type' => \Elementor\Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => array(
@@ -361,23 +366,34 @@ final class WatercolorBackgroundPlugin {
         // Add inline style
         wp_add_inline_style('watercolor-bg-style', $css);
         
-        // Also add to head for editor preview
-        if (is_admin() || \Elementor\Plugin::$instance->preview->is_preview_mode()) {
+        // Also add to head for editor preview - Fixed version
+        if (is_admin() || $this->is_preview_mode()) {
             add_action('wp_head', function() use ($css) {
                 echo "<style>{$css}</style>";
             }, 999);
         }
     }
 
+    // Safe method to check preview mode
+    private function is_preview_mode() {
+        if (class_exists('\Elementor\Plugin')) {
+            $elementor = \Elementor\Plugin::instance();
+            if (isset($elementor->preview) && method_exists($elementor->preview, 'is_preview_mode')) {
+                return $elementor->preview->is_preview_mode();
+            }
+        }
+        return false;
+    }
+
     private function generate_watercolor_css($element_id, $settings) {
-        // Extract settings
-        $base_color = $settings['watercolor_base_color'] ?? '#ffffff';
-        $color1 = $settings['watercolor_color_1'] ?? '#87CEEB';
-        $color2 = $settings['watercolor_color_2'] ?? '#FFB6C1';
+        // Extract settings with safe defaults
+        $base_color = isset($settings['watercolor_base_color']) ? $settings['watercolor_base_color'] : '#ffffff';
+        $color1 = isset($settings['watercolor_color_1']) ? $settings['watercolor_color_1'] : '#87CEEB';
+        $color2 = isset($settings['watercolor_color_2']) ? $settings['watercolor_color_2'] : '#FFB6C1';
         $opacity = isset($settings['watercolor_opacity']['size']) ? $settings['watercolor_opacity']['size'] / 100 : 0.6;
         $speed = isset($settings['watercolor_animation_speed']['size']) ? $settings['watercolor_animation_speed']['size'] : 20;
         $blur = isset($settings['watercolor_blur']['size']) ? $settings['watercolor_blur']['size'] : 40;
-        $effect = $settings['watercolor_effect'] ?? 'acuarela';
+        $effect = isset($settings['watercolor_effect']) ? $settings['watercolor_effect'] : 'acuarela';
 
         // Generate CSS based on effect
         if ($effect === 'barrido') {
@@ -528,6 +544,7 @@ final class WatercolorBackgroundPlugin {
         if (isset($_GET['activate'])) unset($_GET['activate']);
 
         $message = sprintf(
+            /* translators: 1: Plugin name 2: Elementor */
             esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'watercolor-bg'),
             '<strong>' . esc_html__('Watercolor Backgrounds for Elementor', 'watercolor-bg') . '</strong>',
             '<strong>' . esc_html__('Elementor', 'watercolor-bg') . '</strong>'
@@ -540,6 +557,7 @@ final class WatercolorBackgroundPlugin {
         if (isset($_GET['activate'])) unset($_GET['activate']);
 
         $message = sprintf(
+            /* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
             esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'watercolor-bg'),
             '<strong>' . esc_html__('Watercolor Backgrounds for Elementor', 'watercolor-bg') . '</strong>',
             '<strong>' . esc_html__('Elementor', 'watercolor-bg') . '</strong>',
