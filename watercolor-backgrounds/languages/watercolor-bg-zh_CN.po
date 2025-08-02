@@ -1,0 +1,105 @@
+# Chinese (Simplified) translation for Watercolor Backgrounds for Elementor
+# Copyright (C) 2025 Watercolor Backgrounds for Elementor
+# This file is distributed under the same license as the Watercolor Backgrounds for Elementor package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Watercolor Backgrounds for Elementor 3.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/watercolor-backgrounds\n"
+"POT-Creation-Date: 2025-01-01 12:00+0000\n"
+"PO-Revision-Date: 2025-01-01 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0\n"
+
+#: watercolor-backgrounds.php:84
+msgid "🎨 Fondo de Acuarela"
+msgstr "🎨 水彩背景"
+
+#: watercolor-backgrounds.php:91
+msgid "Activar Fondo de Acuarela"
+msgstr "启用水彩背景"
+
+#: watercolor-backgrounds.php:93
+msgid "Sí"
+msgstr "是"
+
+#: watercolor-backgrounds.php:94
+msgid "No"
+msgstr "否"
+
+#: watercolor-backgrounds.php:104
+msgid "Tipo de Efecto"
+msgstr "效果类型"
+
+#: watercolor-backgrounds.php:108
+msgid "💧 Acuarela"
+msgstr "💧 水彩"
+
+#: watercolor-backgrounds.php:109
+msgid "🌊 Barrido"
+msgstr "🌊 扫描"
+
+#: watercolor-backgrounds.php:120
+msgid "🎨 Colores"
+msgstr "🎨 颜色"
+
+#: watercolor-backgrounds.php:131
+msgid "Color de Fondo Base"
+msgstr "基础背景颜色"
+
+#: watercolor-backgrounds.php:145
+msgid "Color Principal"
+msgstr "主要颜色"
+
+#: watercolor-backgrounds.php:159
+msgid "Color Secundario"
+msgstr "次要颜色"
+
+#: watercolor-backgrounds.php:173
+msgid "⚙️ Configuración"
+msgstr "⚙️ 设置"
+
+#: watercolor-backgrounds.php:184
+msgid "Opacidad"
+msgstr "不透明度"
+
+#: watercolor-backgrounds.php:206
+msgid "Velocidad de Animación"
+msgstr "动画速度"
+
+#: watercolor-backgrounds.php:225
+msgid "Intensidad del Desenfoque"
+msgstr "模糊强度"
+
+#: watercolor-backgrounds.php:309
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr "\"%1$s\" 需要安装并激活 \"%2$s\"。"
+
+#: watercolor-backgrounds.php:310
+msgid "Watercolor Backgrounds for Elementor"
+msgstr "Elementor 水彩背景"
+
+#: watercolor-backgrounds.php:311
+msgid "Elementor"
+msgstr "Elementor"
+
+#: watercolor-backgrounds.php:323
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr "\"%1$s\" 需要 \"%2$s\" 版本 %3$s 或更高。"
+
+#: watercolor-backgrounds.php:339
+msgid "Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero."
+msgstr "此插件需要 Elementor 才能运行。请先安装并激活 Elementor。"
+
+#: watercolor-backgrounds.php:340
+msgid "Plugin Activation Error"
+msgstr "插件激活错误"
+
+#: watercolor-backgrounds.php:349
+msgid "Configurar en Elementor"
+msgstr "在 Elementor 中配置"

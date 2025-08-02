@@ -1,0 +1,105 @@
+# Arabic translation for Watercolor Backgrounds for Elementor
+# Copyright (C) 2025 Watercolor Backgrounds for Elementor
+# This file is distributed under the same license as the Watercolor Backgrounds for Elementor package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Watercolor Backgrounds for Elementor 3.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/watercolor-backgrounds\n"
+"POT-Creation-Date: 2025-01-01 12:00+0000\n"
+"PO-Revision-Date: 2025-01-01 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: watercolor-backgrounds.php:84
+msgid "🎨 Fondo de Acuarela"
+msgstr "🎨 خلفية مائية"
+
+#: watercolor-backgrounds.php:91
+msgid "Activar Fondo de Acuarela"
+msgstr "تفعيل الخلفية المائية"
+
+#: watercolor-backgrounds.php:93
+msgid "Sí"
+msgstr "نعم"
+
+#: watercolor-backgrounds.php:94
+msgid "No"
+msgstr "لا"
+
+#: watercolor-backgrounds.php:104
+msgid "Tipo de Efecto"
+msgstr "نوع التأثير"
+
+#: watercolor-backgrounds.php:108
+msgid "💧 Acuarela"
+msgstr "💧 ألوان مائية"
+
+#: watercolor-backgrounds.php:109
+msgid "🌊 Barrido"
+msgstr "🌊 مسح"
+
+#: watercolor-backgrounds.php:120
+msgid "🎨 Colores"
+msgstr "🎨 الألوان"
+
+#: watercolor-backgrounds.php:131
+msgid "Color de Fondo Base"
+msgstr "لون الخلفية الأساسي"
+
+#: watercolor-backgrounds.php:145
+msgid "Color Principal"
+msgstr "اللون الأساسي"
+
+#: watercolor-backgrounds.php:159
+msgid "Color Secundario"
+msgstr "اللون الثانوي"
+
+#: watercolor-backgrounds.php:173
+msgid "⚙️ Configuración"
+msgstr "⚙️ الإعدادات"
+
+#: watercolor-backgrounds.php:184
+msgid "Opacidad"
+msgstr "العتامة"
+
+#: watercolor-backgrounds.php:206
+msgid "Velocidad de Animación"
+msgstr "سرعة الحركة"
+
+#: watercolor-backgrounds.php:225
+msgid "Intensidad del Desenfoque"
+msgstr "شدة التمويه"
+
+#: watercolor-backgrounds.php:309
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr "\"%1$s\" يتطلب تثبيت وتفعيل \"%2$s\"."
+
+#: watercolor-backgrounds.php:310
+msgid "Watercolor Backgrounds for Elementor"
+msgstr "خلفيات مائية لـ Elementor"
+
+#: watercolor-backgrounds.php:311
+msgid "Elementor"
+msgstr "Elementor"
+
+#: watercolor-backgrounds.php:323
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr "\"%1$s\" يتطلب \"%2$s\" الإصدار %3$s أو أحدث."
+
+#: watercolor-backgrounds.php:339
+msgid "Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero."
+msgstr "يتطلب هذا البرنامج المساعد Elementor للعمل. يرجى تثبيت وتفعيل Elementor أولاً."
+
+#: watercolor-backgrounds.php:340
+msgid "Plugin Activation Error"
+msgstr "خطأ في تفعيل البرنامج المساعد"
+
+#: watercolor-backgrounds.php:349
+msgid "Configurar en Elementor"
+msgstr "التكوين في Elementor"
