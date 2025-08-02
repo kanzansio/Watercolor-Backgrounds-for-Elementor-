@@ -1,229 +1,310 @@
-/* Watercolor Backgrounds for Elementor v1.2 - CSS */
+/**
+ * Watercolor Backgrounds for Elementor v2.0 
+ */
 
-/* Estilos base para elementos con fondo de acuarela */
-.watercolor-bg-element {
-    position: relative;
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+.watercolor-active {
+    position: relative !important;
     isolation: isolate;
+    overflow: hidden !important;
 }
 
-/* Animación orgánica más sutil */
-.watercolor-bg-element:before {
-    animation: watercolor-organic 30s ease-in-out infinite;
+.watercolor-active:before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
 }
 
-/* Keyframes optimizados para mejor rendimiento */
-@keyframes watercolor-organic {
-    0%, 100% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.8;
+/* Ensure content is above watercolor background */
+.watercolor-active > .elementor-container,
+.watercolor-active > .elementor-column-wrap,
+.watercolor-active > .elementor-widget-wrap,
+.watercolor-active > .elementor-widget-container,
+.watercolor-active > .e-con,
+.watercolor-active > .e-con-inner,
+.watercolor-active > .e-grid,
+.watercolor-active > .e-grid-item {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* ==========================================================================
+   Animation Controls
+   ========================================================================== */
+
+/* Pause animations on hover for better UX */
+.watercolor-active:hover:before {
+    animation-play-state: paused !important;
+}
+
+/* Base animation classes */
+.watercolor-animate-organic:before {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.watercolor-animate-classic:before {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.watercolor-animate-modern:before {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+/* ==========================================================================
+   Preset Styles for Quick Preview
+   ========================================================================== */
+
+/* Ocean Preset */
+.watercolor-preset-ocean:before {
+    background: 
+        radial-gradient(circle 120px at 15% 25%, rgba(135, 206, 235, 0.6), transparent),
+        radial-gradient(circle 120px at 75% 35%, rgba(70, 130, 180, 0.7), transparent),
+        radial-gradient(circle 120px at 45% 70%, rgba(176, 224, 230, 0.5), transparent),
+        radial-gradient(circle 120px at 85% 15%, rgba(135, 206, 235, 0.4), transparent),
+        radial-gradient(circle 120px at 25% 80%, rgba(70, 130, 180, 0.3), transparent),
+        radial-gradient(circle 120px at 60% 50%, rgba(176, 224, 230, 0.3), transparent) !important;
+    filter: blur(20px) contrast(2) !important;
+    opacity: 0.8 !important;
+}
+
+/* Sunset Preset */
+.watercolor-preset-sunset:before {
+    background: 
+        radial-gradient(circle 120px at 15% 25%, rgba(255, 182, 193, 0.6), transparent),
+        radial-gradient(circle 120px at 75% 35%, rgba(255, 160, 122, 0.7), transparent),
+        radial-gradient(circle 120px at 45% 70%, rgba(255, 105, 180, 0.5), transparent),
+        radial-gradient(circle 120px at 85% 15%, rgba(255, 182, 193, 0.4), transparent),
+        radial-gradient(circle 120px at 25% 80%, rgba(255, 160, 122, 0.3), transparent),
+        radial-gradient(circle 120px at 60% 50%, rgba(255, 105, 180, 0.3), transparent) !important;
+    filter: blur(20px) contrast(2) !important;
+    opacity: 0.8 !important;
+}
+
+/* Forest Preset */
+.watercolor-preset-forest:before {
+    background: 
+        radial-gradient(circle 120px at 15% 25%, rgba(152, 251, 152, 0.6), transparent),
+        radial-gradient(circle 120px at 75% 35%, rgba(144, 238, 144, 0.7), transparent),
+        radial-gradient(circle 120px at 45% 70%, rgba(143, 188, 143, 0.5), transparent),
+        radial-gradient(circle 120px at 85% 15%, rgba(152, 251, 152, 0.4), transparent),
+        radial-gradient(circle 120px at 25% 80%, rgba(144, 238, 144, 0.3), transparent),
+        radial-gradient(circle 120px at 60% 50%, rgba(143, 188, 143, 0.3), transparent) !important;
+    filter: blur(20px) contrast(2) !important;
+    opacity: 0.8 !important;
+}
+
+/* Lavender Preset */
+.watercolor-preset-lavender:before {
+    background: 
+        radial-gradient(circle 120px at 15% 25%, rgba(230, 230, 250, 0.6), transparent),
+        radial-gradient(circle 120px at 75% 35%, rgba(221, 160, 221, 0.7), transparent),
+        radial-gradient(circle 120px at 45% 70%, rgba(216, 191, 216, 0.5), transparent),
+        radial-gradient(circle 120px at 85% 15%, rgba(230, 230, 250, 0.4), transparent),
+        radial-gradient(circle 120px at 25% 80%, rgba(221, 160, 221, 0.3), transparent),
+        radial-gradient(circle 120px at 60% 50%, rgba(216, 191, 216, 0.3), transparent) !important;
+    filter: blur(20px) contrast(2) !important;
+    opacity: 0.8 !important;
+}
+
+/* Autumn Preset */
+.watercolor-preset-autumn:before {
+    background: 
+        radial-gradient(circle 120px at 15% 25%, rgba(255, 140, 105, 0.6), transparent),
+        radial-gradient(circle 120px at 75% 35%, rgba(222, 184, 135, 0.7), transparent),
+        radial-gradient(circle 120px at 45% 70%, rgba(205, 133, 63, 0.5), transparent),
+        radial-gradient(circle 120px at 85% 15%, rgba(255, 140, 105, 0.4), transparent),
+        radial-gradient(circle 120px at 25% 80%, rgba(222, 184, 135, 0.3), transparent),
+        radial-gradient(circle 120px at 60% 50%, rgba(205, 133, 63, 0.3), transparent) !important;
+    filter: blur(20px) contrast(2) !important;
+    opacity: 0.8 !important;
+}
+
+/* Spring Preset */
+.watercolor-preset-spring:before {
+    background: 
+        radial-gradient(circle 120px at 15% 25%, rgba(152, 251, 152, 0.6), transparent),
+        radial-gradient(circle 120px at 75% 35%, rgba(255, 182, 193, 0.7), transparent),
+        radial-gradient(circle 120px at 45% 70%, rgba(221, 160, 221, 0.5), transparent),
+        radial-gradient(circle 120px at 85% 15%, rgba(152, 251, 152, 0.4), transparent),
+        radial-gradient(circle 120px at 25% 80%, rgba(255, 182, 193, 0.3), transparent),
+        radial-gradient(circle 120px at 60% 50%, rgba(221, 160, 221, 0.3), transparent) !important;
+    filter: blur(20px) contrast(2) !important;
+    opacity: 0.8 !important;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .watercolor-active:before {
+        filter: blur(15px) contrast(1.8) !important;
     }
-    25% {
-        transform: translate(0.5%, -0.2%) scale(1.01);
-        opacity: 0.7;
+    
+    .watercolor-animate-organic:before,
+    .watercolor-animate-classic:before {
+        animation-duration: 35s !important;
     }
-    50% {
-        transform: translate(-0.3%, 0.3%) scale(0.99);
-        opacity: 0.9;
-    }
-    75% {
-        transform: translate(0.2%, -0.1%) scale(1.005);
-        opacity: 0.75;
+    
+    .watercolor-animate-modern:before {
+        animation-duration: 45s !important;
     }
 }
 
-/* Pausar animación al hacer hover */
-.watercolor-bg-element:hover:before {
-    animation-play-state: paused;
-}
-
-/* Z-index para contenido */
-.watercolor-bg-element .elementor-container,
-.watercolor-bg-element .elementor-column-wrap,
-.watercolor-bg-element .elementor-widget-wrap,
-.watercolor-bg-element .elementor-widget-container {
-    position: relative;
-    z-index: 3;
-}
-
-/* Optimizaciones para dispositivos móviles */
+/* Mobile optimizations */
 @media (max-width: 768px) {
-    .watercolor-bg-element:before {
-        animation-duration: 45s;
+    .watercolor-active:before {
+        filter: blur(10px) contrast(1.5) !important;
         will-change: transform, opacity;
     }
     
-    /* Reducir efectos en móviles */
-    .watercolor-bg-element:before {
-        filter: blur(10px) contrast(1.5) !important;
+    .watercolor-animate-organic:before,
+    .watercolor-animate-classic:before {
+        animation-duration: 45s !important;
+    }
+    
+    .watercolor-animate-modern:before {
+        animation-duration: 60s !important;
     }
 }
 
-/* Tabletas */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .watercolor-bg-element:before {
-        animation-duration: 35s;
+/* Very small screens */
+@media (max-width: 480px) {
+    .watercolor-active:before {
+        filter: blur(8px) contrast(1.3) !important;
     }
 }
 
-/* Respeto por preferencias de accesibilidad */
+/* ==========================================================================
+   Accessibility & Performance
+   ========================================================================== */
+
+/* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
-    .watercolor-bg-element:before {
+    .watercolor-active:before {
         animation: none !important;
-        opacity: 0.7 !important;
         transform: none !important;
+        opacity: 0.7 !important;
     }
 }
 
-/* Modo oscuro del navegador */
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .watercolor-active:before {
+        filter: blur(10px) contrast(3) !important;
+        opacity: 0.9 !important;
+    }
+}
+
+/* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
-    .watercolor-bg-element {
-        /* Ajustes para modo oscuro si es necesario */
+    .watercolor-active:before {
+        opacity: 0.6 !important;
+        filter: blur(15px) contrast(1.8) brightness(0.9) !important;
     }
 }
 
-/* Optimización para impresión */
+/* Print styles */
 @media print {
-    .watercolor-bg-element:before {
+    .watercolor-active:before {
         display: none !important;
     }
     
-    .watercolor-bg-element {
+    .watercolor-active {
         background: white !important;
     }
 }
 
-/* Compatibilidad con Elementor Container flexbox */
-.watercolor-bg-element.e-con {
-    overflow: hidden;
-}
+/* ==========================================================================
+   Performance Optimizations
+   ========================================================================== */
 
-.watercolor-bg-element.e-con > .e-con-inner {
-    position: relative;
-    z-index: 2;
-}
-
-/* Compatibilidad con Grid Container */
-.watercolor-bg-element.e-grid {
-    overflow: hidden;
-}
-
-.watercolor-bg-element.e-grid > .e-grid-item {
-    position: relative;
-    z-index: 2;
-}
-
-/* Mejoras de rendimiento */
-.watercolor-bg-element:before {
+/* GPU acceleration for better performance */
+.watercolor-active:before {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     perspective: 1000px;
-    transform3d: translateZ(0);
-    -webkit-transform3d: translateZ(0);
+    -webkit-perspective: 1000px;
 }
 
-/* Soporte para high-DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .watercolor-bg-element:before {
-        /* Ajustes para pantallas retina si es necesario */
+/* Reduce complexity on slower devices */
+@media (max-width: 768px), (max-height: 600px) {
+    .watercolor-active:before {
+        background-size: 200% 200% !important;
     }
 }
 
-/* Fallback para navegadores más antiguos */
-.no-css-filters .watercolor-bg-element:before {
-    display: none;
+/* ==========================================================================
+   Editor Specific Styles
+   ========================================================================== */
+
+/* Ensure visibility in Elementor preview */
+.elementor-preview .watercolor-active {
+    overflow: hidden !important;
 }
 
-/* Utilidades adicionales */
-.watercolor-bg-element.watercolor-paused:before {
-    animation-play-state: paused !important;
+.elementor-preview .watercolor-active:before {
+    backface-visibility: visible;
+    will-change: auto;
 }
 
-.watercolor-bg-element.watercolor-hidden:before {
-    opacity: 0 !important;
-}color-organic 30s ease-in-out infinite;
+/* Editor panel helper */
+.elementor-control-watercolor_enable .elementor-control-title:before {
+    content: "🎨 ";
 }
 
-/* Keyframes más orgánicos y sutiles */
-@keyframes watercolor-organic {
-    0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.8;
-    }
-    20% {
-        transform: translate(1%, -0.3%) scale(1.01);
-        opacity: 0.7;
-    }
-    40% {
-        transform: translate(-0.2%, 0.5%) scale(0.99);
-        opacity: 0.9;
-    }
-    60% {
-        transform: translate(0.3%, -0.1%) scale(1.02);
-        opacity: 0.6;
-    }
-    80% {
-        transform: translate(-0.1%, 0.2%) scale(0.98);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.7;
+/* ==========================================================================
+   Fallbacks & Browser Support
+   ========================================================================== */
+
+/* Fallback for browsers that don't support CSS filters */
+.no-css-filters .watercolor-active:before {
+    background: rgba(135, 206, 235, 0.3) !important;
+    filter: none !important;
+}
+
+/* IE11 and older browser fallbacks */
+.watercolor-active {
+    background: rgba(255, 255, 255, 1) !important;
+}
+
+@supports not (filter: blur(1px)) {
+    .watercolor-active:before {
+        background: linear-gradient(45deg, rgba(135, 206, 235, 0.3) 0%, transparent 50%) !important;
+        filter: none !important;
     }
 }
 
-/* Pausa la animación al hacer hover */
-.watercolor-bg-element:hover:before {
-    animation-play-state: paused;
+/* ==========================================================================
+   Debug Helpers (Development Only)
+   ========================================================================== */
+
+/* Uncomment for debugging */
+/*
+.watercolor-active {
+    border: 2px dashed red !important;
 }
 
-/* Asegurar que el contenido esté por encima del fondo */
-.watercolor-bg-element .elementor-container,
-.watercolor-bg-element .elementor-column-wrap,
-.watercolor-bg-element .elementor-widget-wrap,
-.watercolor-bg-element .elementor-widget-container {
-    position: relative;
-    z-index: 3;
+.watercolor-active:before {
+    border: 1px solid blue !important;
 }
-
-/* Responsive: Reducir intensidad en móviles */
-@media (max-width: 768px) {
-    .watercolor-bg-element:before {
-        animation-duration: 45s;
-        will-change: transform, opacity;
-    }
-    
-    /* Reducir blur en móviles para mejor rendimiento */
-    .watercolor-bg-element:before {
-        filter: blur(10px) contrast(1.5) !important;
-    }
-}
-
-/* Reducir efectos para usuarios que prefieren menos movimiento */
-@media (prefers-reduced-motion: reduce) {
-    .watercolor-bg-element:before {
-        animation: none;
-        opacity: 0.7 !important;
-    }
-}
-
-/* Optimización para impresión */
-@media print {
-    .watercolor-bg-element:before {
-        display: none;
-    }
-}
-
-/* Mejoras para el contraste y legibilidad */
-.watercolor-bg-element {
-    /* Asegurar que el texto sea legible sobre el fondo */
-    color: inherit;
-}
-
-/* Variante para fondos muy claros */
-.watercolor-bg-element[data-bg-type="light"] {
-    color: #333;
-}
-
-/* Variante para fondos oscuros */
-.watercolor-bg-element[data-bg-type="dark"] {
-    color: #fff;
-}
+*/
