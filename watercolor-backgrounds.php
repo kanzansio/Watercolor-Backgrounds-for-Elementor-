@@ -1,30 +1,30 @@
 <?php
 /**
- * Plugin Name: Watercolor Backgrounds for Elementor
+ * Plugin Name: Watercolor Backgrounds for Elementor 2025
  * Plugin URI: https://kanzansio.digital/
- * Description: Fondos de acuarela animados para Elementor 
- * Version: 3.0.1
+ * Description: Fondos de acuarela animados para Elementor - Versión 2025 optimizada
+ * Version: 4.0.0
  * Author: Kanzansio.Digital
  * Text Domain: watercolor-bg
  * Domain Path: /languages
- * Requires at least: 5.0
- * Tested up to: 6.4
- * Requires PHP: 7.4
- * Elementor tested up to: 3.28
- * Elementor Pro tested up to: 3.28
+ * Requires at least: 6.0
+ * Tested up to: 6.5
+ * Requires PHP: 8.0
+ * Elementor tested up to: 3.30
+ * Elementor Pro tested up to: 3.30
  */
 
 if (!defined('ABSPATH')) {
     exit;
 }
 
-// Definir constantes del plugin
-define('WATERCOLOR_BG_VERSION', '3.0.1');
+// Constantes del plugin
+define('WATERCOLOR_BG_VERSION', '4.0.0');
 define('WATERCOLOR_BG_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('WATERCOLOR_BG_PLUGIN_PATH', plugin_dir_path(__FILE__));
-define('WATERCOLOR_BG_MINIMUM_ELEMENTOR_VERSION', '3.0.0');
+define('WATERCOLOR_BG_MINIMUM_ELEMENTOR_VERSION', '3.20.0');
 
-final class WatercolorBackgroundPlugin {
+final class WatercolorBackgroundPlugin2025 {
     
     private static $_instance = null;
 
@@ -46,14 +46,12 @@ final class WatercolorBackgroundPlugin {
     }
 
     public function is_compatible() {
-        // Check if Elementor is installed and activated
         if (!did_action('elementor/loaded')) {
             add_action('admin_notices', array($this, 'admin_notice_missing_main_plugin'));
             return false;
         }
 
-        // Check for required Elementor version
-        if (!defined('ELEMENTOR_VERSION') || !version_compare(ELEMENTOR_VERSION, WATERCOLOR_BG_MINIMUM_ELEMENTOR_VERSION, '>=')) {
+        if (!version_compare(ELEMENTOR_VERSION, WATERCOLOR_BG_MINIMUM_ELEMENTOR_VERSION, '>=')) {
             add_action('admin_notices', array($this, 'admin_notice_minimum_elementor_version'));
             return false;
         }
@@ -62,21 +60,16 @@ final class WatercolorBackgroundPlugin {
     }
 
     public function init() {
-        // Load textdomain
         add_action('init', array($this, 'i18n'));
-
-        // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'widget_scripts'));
         add_action('elementor/frontend/after_enqueue_styles', array($this, 'widget_styles'));
-        add_action('elementor/preview/enqueue_styles', array($this, 'widget_styles'));
         add_action('elementor/editor/after_enqueue_scripts', array($this, 'editor_scripts'));
-
-        // Register controls injection
+        
         $this->register_controls_injection();
     }
 
     public function i18n() {
-        load_plugin_textdomain('watercolor-bg', false, dirname(plugin_basename(__FILE__)) . '/languages');
+        load_plugin_textdomain('watercolor-bg');
     }
 
     public function widget_scripts() {
@@ -85,13 +78,8 @@ final class WatercolorBackgroundPlugin {
             WATERCOLOR_BG_PLUGIN_URL . 'assets/watercolor-frontend.js',
             array('jquery'),
             WATERCOLOR_BG_VERSION,
-            true
+            array('in_footer' => true)
         );
-
-        wp_localize_script('watercolor-bg-frontend', 'watercolorBg', array(
-            'ajaxurl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('watercolor_bg_nonce'),
-        ));
     }
 
     public function widget_styles() {
@@ -104,7 +92,6 @@ final class WatercolorBackgroundPlugin {
     }
 
     public function editor_scripts() {
-        // Enqueue preview styles in editor
         wp_enqueue_style(
             'watercolor-bg-editor-preview',
             WATERCOLOR_BG_PLUGIN_URL . 'assets/watercolor-bg.css',
@@ -117,49 +104,34 @@ final class WatercolorBackgroundPlugin {
             WATERCOLOR_BG_PLUGIN_URL . 'assets/watercolor-editor.js',
             array('jquery', 'elementor-editor'),
             WATERCOLOR_BG_VERSION,
-            true
+            array('in_footer' => true)
         );
-
-        wp_localize_script('watercolor-bg-editor', 'watercolorEditor', array(
-            'version' => WATERCOLOR_BG_VERSION,
-        ));
     }
 
     private function register_controls_injection() {
-        // Hook into elements to add controls
+        // Soporte para containers modernos de Elementor 2025
         add_action('elementor/element/section/section_background/before_section_end', array($this, 'register_watercolor_controls'), 10, 2);
         add_action('elementor/element/container/section_background/before_section_end', array($this, 'register_watercolor_controls'), 10, 2);
         add_action('elementor/element/column/section_background/before_section_end', array($this, 'register_watercolor_controls'), 10, 2);
+        
+        // Nuevos elementos de Elementor 2025
+        add_action('elementor/element/e-container/section_background/before_section_end', array($this, 'register_watercolor_controls'), 10, 2);
 
-        // Hook into rendering
+        // Rendering hooks
         add_action('elementor/frontend/section/before_render', array($this, 'before_render_element'));
         add_action('elementor/frontend/container/before_render', array($this, 'before_render_element'));
         add_action('elementor/frontend/column/before_render', array($this, 'before_render_element'));
     }
 
     public function register_watercolor_controls($element, $args) {
-        // Use Controls_Manager constant to avoid errors
-        if (!class_exists('\Elementor\Controls_Manager')) {
-            return;
-        }
-
-        $element->add_control(
-            'watercolor_divider',
+        $element->start_controls_section(
+            'watercolor_section',
             array(
-                'type' => \Elementor\Controls_Manager::DIVIDER,
-                'style' => 'thick',
+                'label' => esc_html__('🎨 Fondo de Acuarela', 'watercolor-bg'),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
             )
         );
 
-        $element->add_control(
-            'watercolor_heading',
-            array(
-                'label' => esc_html__('Fondo de Acuarela', 'watercolor-bg'),
-                'type' => \Elementor\Controls_Manager::HEADING,
-            )
-        );
-
-        // Enable/Disable control
         $element->add_control(
             'watercolor_enable',
             array(
@@ -170,11 +142,9 @@ final class WatercolorBackgroundPlugin {
                 'return_value' => 'yes',
                 'default' => '',
                 'frontend_available' => true,
-                'render_type' => 'ui',
             )
         );
 
-        // Effect type
         $element->add_control(
             'watercolor_effect',
             array(
@@ -182,22 +152,20 @@ final class WatercolorBackgroundPlugin {
                 'type' => \Elementor\Controls_Manager::SELECT,
                 'default' => 'acuarela',
                 'options' => array(
-                    'acuarela' => esc_html__('Acuarela', 'watercolor-bg'),
-                    'barrido' => esc_html__('Barrido', 'watercolor-bg'),
+                    'acuarela' => esc_html__('💧 Acuarela', 'watercolor-bg'),
+                    'barrido' => esc_html__('🌊 Barrido', 'watercolor-bg'),
                 ),
                 'condition' => array(
                     'watercolor_enable' => 'yes',
                 ),
                 'frontend_available' => true,
-                'render_type' => 'ui',
             )
         );
 
-        // Color controls heading
         $element->add_control(
             'watercolor_colors_heading',
             array(
-                'label' => esc_html__('Colores', 'watercolor-bg'),
+                'label' => esc_html__('🎨 Colores', 'watercolor-bg'),
                 'type' => \Elementor\Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => array(
@@ -206,7 +174,6 @@ final class WatercolorBackgroundPlugin {
             )
         );
 
-        // Base color
         $element->add_control(
             'watercolor_base_color',
             array(
@@ -217,11 +184,9 @@ final class WatercolorBackgroundPlugin {
                     'watercolor_enable' => 'yes',
                 ),
                 'frontend_available' => true,
-                'render_type' => 'ui',
             )
         );
 
-        // Color 1
         $element->add_control(
             'watercolor_color_1',
             array(
@@ -232,11 +197,9 @@ final class WatercolorBackgroundPlugin {
                     'watercolor_enable' => 'yes',
                 ),
                 'frontend_available' => true,
-                'render_type' => 'ui',
             )
         );
 
-        // Color 2
         $element->add_control(
             'watercolor_color_2',
             array(
@@ -247,15 +210,13 @@ final class WatercolorBackgroundPlugin {
                     'watercolor_enable' => 'yes',
                 ),
                 'frontend_available' => true,
-                'render_type' => 'ui',
             )
         );
 
-        // Settings heading
         $element->add_control(
             'watercolor_settings_heading',
             array(
-                'label' => esc_html__('Configuración', 'watercolor-bg'),
+                'label' => esc_html__('⚙️ Configuración', 'watercolor-bg'),
                 'type' => \Elementor\Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => array(
@@ -264,7 +225,6 @@ final class WatercolorBackgroundPlugin {
             )
         );
 
-        // Opacity
         $element->add_control(
             'watercolor_opacity',
             array(
@@ -286,11 +246,9 @@ final class WatercolorBackgroundPlugin {
                     'watercolor_enable' => 'yes',
                 ),
                 'frontend_available' => true,
-                'render_type' => 'ui',
             )
         );
 
-        // Animation speed
         $element->add_control(
             'watercolor_animation_speed',
             array(
@@ -310,11 +268,9 @@ final class WatercolorBackgroundPlugin {
                     'watercolor_enable' => 'yes',
                 ),
                 'frontend_available' => true,
-                'render_type' => 'ui',
             )
         );
 
-        // Blur intensity
         $element->add_control(
             'watercolor_blur',
             array(
@@ -334,9 +290,10 @@ final class WatercolorBackgroundPlugin {
                     'watercolor_enable' => 'yes',
                 ),
                 'frontend_available' => true,
-                'render_type' => 'ui',
             )
         );
+
+        $element->end_controls_section();
     }
 
     public function before_render_element($element) {
@@ -345,17 +302,14 @@ final class WatercolorBackgroundPlugin {
         if (!empty($settings['watercolor_enable']) && $settings['watercolor_enable'] === 'yes') {
             $element_id = $element->get_id();
             
-            // Add classes for styling
             $element->add_render_attribute('_wrapper', 'class', array(
                 'watercolor-active',
                 'watercolor-element-' . $element_id,
                 'watercolor-effect-' . ($settings['watercolor_effect'] ?? 'acuarela')
             ));
             
-            // Add data attributes for JS
             $element->add_render_attribute('_wrapper', 'data-watercolor-settings', wp_json_encode($settings));
             
-            // Generate and inject CSS
             $this->inject_element_styles($element_id, $settings);
         }
     }
@@ -363,39 +317,24 @@ final class WatercolorBackgroundPlugin {
     private function inject_element_styles($element_id, $settings) {
         $css = $this->generate_watercolor_css($element_id, $settings);
         
-        // Add inline style
         wp_add_inline_style('watercolor-bg-style', $css);
         
-        // Also add to head for editor preview - Fixed version
-        if (is_admin() || $this->is_preview_mode()) {
+        if (\Elementor\Plugin::$instance->editor->is_edit_mode() || \Elementor\Plugin::$instance->preview->is_preview_mode()) {
             add_action('wp_head', function() use ($css) {
                 echo "<style>{$css}</style>";
             }, 999);
         }
     }
 
-    // Safe method to check preview mode
-    private function is_preview_mode() {
-        if (class_exists('\Elementor\Plugin')) {
-            $elementor = \Elementor\Plugin::instance();
-            if (isset($elementor->preview) && method_exists($elementor->preview, 'is_preview_mode')) {
-                return $elementor->preview->is_preview_mode();
-            }
-        }
-        return false;
-    }
-
     private function generate_watercolor_css($element_id, $settings) {
-        // Extract settings with safe defaults
-        $base_color = isset($settings['watercolor_base_color']) ? $settings['watercolor_base_color'] : '#ffffff';
-        $color1 = isset($settings['watercolor_color_1']) ? $settings['watercolor_color_1'] : '#87CEEB';
-        $color2 = isset($settings['watercolor_color_2']) ? $settings['watercolor_color_2'] : '#FFB6C1';
-        $opacity = isset($settings['watercolor_opacity']['size']) ? $settings['watercolor_opacity']['size'] / 100 : 0.6;
-        $speed = isset($settings['watercolor_animation_speed']['size']) ? $settings['watercolor_animation_speed']['size'] : 20;
-        $blur = isset($settings['watercolor_blur']['size']) ? $settings['watercolor_blur']['size'] : 40;
-        $effect = isset($settings['watercolor_effect']) ? $settings['watercolor_effect'] : 'acuarela';
+        $base_color = $settings['watercolor_base_color'] ?? '#ffffff';
+        $color1 = $settings['watercolor_color_1'] ?? '#87CEEB';
+        $color2 = $settings['watercolor_color_2'] ?? '#FFB6C1';
+        $opacity = ($settings['watercolor_opacity']['size'] ?? 60) / 100;
+        $speed = $settings['watercolor_animation_speed']['size'] ?? 20;
+        $blur = $settings['watercolor_blur']['size'] ?? 40;
+        $effect = $settings['watercolor_effect'] ?? 'acuarela';
 
-        // Generate CSS based on effect
         if ($effect === 'barrido') {
             return $this->generate_barrido_css($element_id, $base_color, $color1, $color2, $opacity, $speed, $blur);
         } else {
@@ -424,8 +363,8 @@ final class WatercolorBackgroundPlugin {
             left: -25% !important;
             z-index: 0 !important;
             pointer-events: none !important;
-            mix-blend-mode: multiply;
             filter: blur({$blur}px) !important;
+            will-change: transform !important;
         }
         
         .watercolor-element-{$element_id}:before {
@@ -446,27 +385,15 @@ final class WatercolorBackgroundPlugin {
         }
         
         @keyframes watercolor-acuarela-1-{$element_id} {
-            0%, 100% {
-                transform: translate(0, 0) rotate(0deg) scale(1);
-            }
-            33% {
-                transform: translate(2%, -3%) rotate(1deg) scale(1.02);
-            }
-            66% {
-                transform: translate(-1%, 2%) rotate(-1deg) scale(0.98);
-            }
+            0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            33% { transform: translate(2%, -3%) rotate(1deg) scale(1.02); }
+            66% { transform: translate(-1%, 2%) rotate(-1deg) scale(0.98); }
         }
         
         @keyframes watercolor-acuarela-2-{$element_id} {
-            0%, 100% {
-                transform: translate(0, 0) rotate(0deg) scale(1);
-            }
-            33% {
-                transform: translate(-2%, 1%) rotate(-1deg) scale(0.98);
-            }
-            66% {
-                transform: translate(3%, -2%) rotate(1deg) scale(1.03);
-            }
+            0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            33% { transform: translate(-2%, 1%) rotate(-1deg) scale(0.98); }
+            66% { transform: translate(3%, -2%) rotate(1deg) scale(1.03); }
         }
         ";
     }
@@ -492,11 +419,7 @@ final class WatercolorBackgroundPlugin {
             z-index: 0 !important;
             pointer-events: none !important;
             background: linear-gradient(45deg, 
-                {$rgba1} 0%, 
-                {$rgba2} 25%, 
-                {$rgba1} 50%, 
-                {$rgba2} 75%, 
-                {$rgba1} 100%) !important;
+                {$rgba1} 0%, {$rgba2} 25%, {$rgba1} 50%, {$rgba2} 75%, {$rgba1} 100%) !important;
             background-size: 400% 400% !important;
             filter: blur({$blur}px) !important;
             animation: watercolor-barrido-{$element_id} {$speed}s ease-in-out infinite !important;
@@ -508,18 +431,9 @@ final class WatercolorBackgroundPlugin {
         }
         
         @keyframes watercolor-barrido-{$element_id} {
-            0% {
-                background-position: 0% 50%;
-                transform: rotate(0deg) scale(1);
-            }
-            50% {
-                background-position: 100% 50%;
-                transform: rotate(180deg) scale(1.1);
-            }
-            100% {
-                background-position: 0% 50%;
-                transform: rotate(360deg) scale(1);
-            }
+            0% { background-position: 0% 50%; transform: rotate(0deg) scale(1); }
+            50% { background-position: 100% 50%; transform: rotate(180deg) scale(1.1); }
+            100% { background-position: 0% 50%; transform: rotate(360deg) scale(1); }
         }
         ";
     }
@@ -544,10 +458,9 @@ final class WatercolorBackgroundPlugin {
         if (isset($_GET['activate'])) unset($_GET['activate']);
 
         $message = sprintf(
-            /* translators: 1: Plugin name 2: Elementor */
-            esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'watercolor-bg'),
-            '<strong>' . esc_html__('Watercolor Backgrounds for Elementor', 'watercolor-bg') . '</strong>',
-            '<strong>' . esc_html__('Elementor', 'watercolor-bg') . '</strong>'
+            esc_html__('"%1$s" requiere "%2$s" para funcionar.', 'watercolor-bg'),
+            '<strong>Watercolor Backgrounds</strong>',
+            '<strong>Elementor</strong>'
         );
 
         printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
@@ -557,10 +470,8 @@ final class WatercolorBackgroundPlugin {
         if (isset($_GET['activate'])) unset($_GET['activate']);
 
         $message = sprintf(
-            /* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-            esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'watercolor-bg'),
-            '<strong>' . esc_html__('Watercolor Backgrounds for Elementor', 'watercolor-bg') . '</strong>',
-            '<strong>' . esc_html__('Elementor', 'watercolor-bg') . '</strong>',
+            esc_html__('"%1$s" requiere Elementor versión %2$s o superior.', 'watercolor-bg'),
+            '<strong>Watercolor Backgrounds</strong>',
             WATERCOLOR_BG_MINIMUM_ELEMENTOR_VERSION
         );
 
@@ -568,23 +479,21 @@ final class WatercolorBackgroundPlugin {
     }
 }
 
-WatercolorBackgroundPlugin::instance();
+WatercolorBackgroundPlugin2025::instance();
 
-// Activation hook
 register_activation_hook(__FILE__, function() {
     if (!did_action('elementor/loaded')) {
         deactivate_plugins(plugin_basename(__FILE__));
         wp_die(
-            esc_html__('Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero.', 'watercolor-bg'),
-            esc_html__('Plugin Activation Error', 'watercolor-bg'),
+            esc_html__('Este plugin requiere Elementor para funcionar.', 'watercolor-bg'),
+            esc_html__('Error de Activación', 'watercolor-bg'),
             array('back_link' => true)
         );
     }
 });
 
-// Add settings link on plugin page
 add_filter('plugin_action_links_' . plugin_basename(__FILE__), function($links) {
-    $settings_link = '<a href="' . admin_url('admin.php?page=elementor') . '">' . esc_html__('Configurar en Elementor', 'watercolor-bg') . '</a>';
+    $settings_link = '<a href="' . admin_url('admin.php?page=elementor') . '">Configurar</a>';
     array_unshift($links, $settings_link);
     return $links;
 });
