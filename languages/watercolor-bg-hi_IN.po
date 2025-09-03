@@ -1,9 +1,8 @@
 # Hindi translation for Watercolor Backgrounds for Elementor
 # Copyright (C) 2025 Watercolor Backgrounds for Elementor
-# This file is distributed under the same license as the Watercolor Backgrounds for Elementor package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Watercolor Backgrounds for Elementor 3.0.0\n"
+"Project-Id-Version: Watercolor Backgrounds for Elementor 4.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/watercolor-backgrounds\n"
 "POT-Creation-Date: 2025-01-01 12:00+0000\n"
 "PO-Revision-Date: 2025-01-01 12:00+0000\n"
@@ -14,92 +13,165 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
 
-#: watercolor-backgrounds.php:84
-msgid "🎨 Fondo de Acuarela"
-msgstr "🎨 जलरंग पृष्ठभूमि"
-
-#: watercolor-backgrounds.php:91
-msgid "Activar Fondo de Acuarela"
-msgstr "जलरंग पृष्ठभूमि सक्षम करें"
-
-#: watercolor-backgrounds.php:93
-msgid "Sí"
-msgstr "हाँ"
-
-#: watercolor-backgrounds.php:94
-msgid "No"
-msgstr "नहीं"
-
-#: watercolor-backgrounds.php:104
-msgid "Tipo de Efecto"
-msgstr "प्रभाव का प्रकार"
-
-#: watercolor-backgrounds.php:108
-msgid "💧 Acuarela"
-msgstr "💧 जलरंग"
-
-#: watercolor-backgrounds.php:109
-msgid "🌊 Barrido"
-msgstr "🌊 स्वीप"
-
-#: watercolor-backgrounds.php:120
-msgid "🎨 Colores"
-msgstr "🎨 रंग"
-
-#: watercolor-backgrounds.php:131
-msgid "Color de Fondo Base"
-msgstr "आधार पृष्ठभूमि रंग"
-
-#: watercolor-backgrounds.php:145
-msgid "Color Principal"
-msgstr "प्राथमिक रंग"
-
-#: watercolor-backgrounds.php:159
-msgid "Color Secundario"
-msgstr "द्वितीयक रंग"
-
-#: watercolor-backgrounds.php:173
-msgid "⚙️ Configuración"
-msgstr "⚙️ सेटिंग्स"
-
-#: watercolor-backgrounds.php:184
-msgid "Opacidad"
-msgstr "अपारदर्शिता"
-
-#: watercolor-backgrounds.php:206
-msgid "Velocidad de Animación"
-msgstr "एनिमेशन गति"
-
-#: watercolor-backgrounds.php:225
-msgid "Intensidad del Desenfoque"
-msgstr "धुंधलापन तीव्रता"
-
-#: watercolor-backgrounds.php:309
-msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgid "\"%1$s\" requiere \"%2$s\" para ser instalado y activado."
 msgstr "\"%1$s\" के लिए \"%2$s\" को इंस्टॉल और सक्रिय करना आवश्यक है।"
 
-#: watercolor-backgrounds.php:310
 msgid "Watercolor Backgrounds for Elementor"
 msgstr "Elementor के लिए जलरंग पृष्ठभूमि"
 
-#: watercolor-backgrounds.php:311
 msgid "Elementor"
 msgstr "Elementor"
 
-#: watercolor-backgrounds.php:323
-msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgid "\"%1$s\" requiere \"%2$s\" versión %3$s o superior."
 msgstr "\"%1$s\" के लिए \"%2$s\" संस्करण %3$s या उससे अधिक की आवश्यकता है।"
 
-#: watercolor-backgrounds.php:339
 msgid "Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero."
 msgstr "इस प्लगइन को काम करने के लिए Elementor की आवश्यकता है। कृपया पहले Elementor इंस्टॉल और सक्रिय करें।"
 
-#: watercolor-backgrounds.php:340
 msgid "Plugin Activation Error"
 msgstr "प्लगइन सक्रियण त्रुटि"
 
-#: watercolor-backgrounds.php:349
-msgid "Configurar en Elementor"
-msgstr "Elementor में कॉन्फ़िगर करें"
+msgid "Abrir Elementor"
+msgstr "Elementor खोलें"
+
+msgid "🎨 Contenedor Acuarela"
+msgstr "🎨 जलरंग कंटेनर"
+
+msgid "Contenido"
+msgstr "सामग्री"
+
+msgid "Tipo de Contenido"
+msgstr "सामग्री प्रकार"
+
+msgid "Texto"
+msgstr "टेक्स्ट"
+
+msgid "Plantilla Guardada"
+msgstr "सहेजा गया टेम्प्लेट"
+
+msgid "Sin Contenido"
+msgstr "कोई सामग्री नहीं"
+
+msgid "Contenido del contenedor acuarela"
+msgstr "जलरंग कंटेनर सामग्री"
+
+msgid "Seleccionar Plantilla"
+msgstr "टेम्प्लेट चुनें"
+
+msgid "🎨 Efecto Acuarela"
+msgstr "🎨 जलरंग प्रभाव"
+
+msgid "Tipo de Efecto"
+msgstr "प्रभाव का प्रकार"
+
+msgid "💧 Acuarela"
+msgstr "💧 जलरंग"
+
+msgid "🌊 Barrido"
+msgstr "🌊 स्वीप"
+
+msgid "Preset de Colores"
+msgstr "रंग प्रीसेट"
+
+msgid "Personalizado"
+msgstr "कस्टम"
+
+msgid "🌊 Océano"
+msgstr "🌊 समुद्र"
+
+msgid "🌅 Atardecer"
+msgstr "🌅 सूर्यास्त"
+
+msgid "🌲 Bosque"
+msgstr "🌲 जंगल"
+
+msgid "💜 Lavanda"
+msgstr "💜 लैवेंडर"
+
+msgid "Color de Fondo Base"
+msgstr "आधार पृष्ठभूमि रंग"
+
+msgid "Color Principal"
+msgstr "प्राथमिक रंग"
+
+msgid "Color Secundario"
+msgstr "द्वितीयक रंग"
+
+msgid "Opacidad"
+msgstr "अपारदर्शिता"
+
+msgid "Velocidad de Animación"
+msgstr "एनिमेशन गति"
+
+msgid "Segundos por ciclo de animación"
+msgstr "प्रति एनिमेशन चक्र सेकंड"
+
+msgid "Intensidad del Desenfoque"
+msgstr "धुंधलापन तीव्रता"
+
+msgid "Configuración del Contenedor"
+msgstr "कंटेनर सेटिंग्स"
+
+msgid "Altura Mínima"
+msgstr "न्यूनतम ऊंचाई"
+
+msgid "Relleno"
+msgstr "पैडिंग"
+
+msgid "Alineación"
+msgstr "संरेखण"
+
+msgid "Izquierda"
+msgstr "बाएं"
+
+msgid "Centro"
+msgstr "केंद्र"
+
+msgid "Derecha"
+msgstr "दाएं"
+
+msgid "Radio del Borde"
+msgstr "बॉर्डर त्रिज्या"
+
+msgid "Tipografía"
+msgstr "टाइपोग्राफी"
+
+msgid "Color del Texto"
+msgstr "टेक्स्ट रंग"
+
+msgid "Avanzado"
+msgstr "उन्नत"
+
+msgid "Pausar al Pasar el Ratón"
+msgstr "होवर पर रोकें"
+
+msgid "Sí"
+msgstr "हाँ"
+
+msgid "No"
+msgstr "नहीं"
+
+msgid "Modo de Mezcla"
+msgstr "ब्लेंड मोड"
+
+msgid "Normal"
+msgstr "सामान्य"
+
+msgid "Multiplicar"
+msgstr "गुणा"
+
+msgid "Pantalla"
+msgstr "स्क्रीन"
+
+msgid "Superponer"
+msgstr "ओवरले"
+
+msgid "Luz Suave"
+msgstr "सॉफ्ट लाइट"
+
+msgid "-- Seleccionar --"
+msgstr "-- चुनें --"
+
+msgid "La plantilla se mostrará aquí"
+msgstr "टेम्प्लेट यहाँ दिखाया जाएगा"

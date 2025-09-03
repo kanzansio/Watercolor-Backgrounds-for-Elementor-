@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Watercolor Backgrounds for Elementor package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Watercolor Backgrounds for Elementor 3.0.0\n"
+"Project-Id-Version: Watercolor Backgrounds for Elementor 4.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/watercolor-backgrounds\n"
 "POT-Creation-Date: 2025-01-01 12:00+0000\n"
 "MIME-Version: 1.0\n"
@@ -12,90 +12,222 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: watercolor-backgrounds.php:84
-msgid "🎨 Fondo de Acuarela"
+#: watercolor-backgrounds.php:45
+msgid "\"%1$s\" requiere \"%2$s\" para ser instalado y activado."
 msgstr ""
 
-#: watercolor-backgrounds.php:91
-msgid "Activar Fondo de Acuarela"
-msgstr ""
-
-#: watercolor-backgrounds.php:93
-msgid "Sí"
-msgstr ""
-
-#: watercolor-backgrounds.php:94
-msgid "No"
-msgstr ""
-
-#: watercolor-backgrounds.php:104
-msgid "Tipo de Efecto"
-msgstr ""
-
-#: watercolor-backgrounds.php:108
-msgid "💧 Acuarela"
-msgstr ""
-
-#: watercolor-backgrounds.php:109
-msgid "🌊 Barrido"
-msgstr ""
-
-#: watercolor-backgrounds.php:120
-msgid "🎨 Colores"
-msgstr ""
-
-#: watercolor-backgrounds.php:131
-msgid "Color de Fondo Base"
-msgstr ""
-
-#: watercolor-backgrounds.php:145
-msgid "Color Principal"
-msgstr ""
-
-#: watercolor-backgrounds.php:159
-msgid "Color Secundario"
-msgstr ""
-
-#: watercolor-backgrounds.php:173
-msgid "⚙️ Configuración"
-msgstr ""
-
-#: watercolor-backgrounds.php:184
-msgid "Opacidad"
-msgstr ""
-
-#: watercolor-backgrounds.php:206
-msgid "Velocidad de Animación"
-msgstr ""
-
-#: watercolor-backgrounds.php:225
-msgid "Intensidad del Desenfoque"
-msgstr ""
-
-#: watercolor-backgrounds.php:309
-msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
-msgstr ""
-
-#: watercolor-backgrounds.php:310
+#: watercolor-backgrounds.php:46 watercolor-backgrounds.php:55
 msgid "Watercolor Backgrounds for Elementor"
 msgstr ""
 
-#: watercolor-backgrounds.php:311
+#: watercolor-backgrounds.php:47 watercolor-backgrounds.php:56
 msgid "Elementor"
 msgstr ""
 
-#: watercolor-backgrounds.php:323
-msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+#: watercolor-backgrounds.php:54
+msgid "\"%1$s\" requiere \"%2$s\" versión %3$s o superior."
 msgstr ""
 
-#: watercolor-backgrounds.php:339
+#: watercolor-backgrounds.php:71
 msgid "Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero."
 msgstr ""
 
-#: watercolor-backgrounds.php:340
+#: watercolor-backgrounds.php:72
 msgid "Plugin Activation Error"
 msgstr ""
 
-#: watercolor-backgrounds.php:349
-msgid "Configurar en Elementor"
+#: watercolor-backgrounds.php:80
+msgid "Abrir Elementor"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:18
+msgid "🎨 Contenedor Acuarela"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:36
+msgid "Contenido"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:44
+msgid "Tipo de Contenido"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:48
+msgid "Texto"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:49
+msgid "Plantilla Guardada"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:50
+msgid "Sin Contenido"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:57
+msgid "Contenido"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:59
+msgid "Contenido del contenedor acuarela"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:68
+msgid "Seleccionar Plantilla"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:82
+msgid "🎨 Efecto Acuarela"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:90
+msgid "Tipo de Efecto"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:94
+msgid "💧 Acuarela"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:95
+msgid "🌊 Barrido"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:102
+msgid "Preset de Colores"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:106
+msgid "Personalizado"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:107
+msgid "🌊 Océano"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:108
+msgid "🌅 Atardecer"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:109
+msgid "🌲 Bosque"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:110
+msgid "💜 Lavanda"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:117
+msgid "Color de Fondo Base"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:128
+msgid "Color Principal"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:139
+msgid "Color Secundario"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:150
+msgid "Opacidad"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:169
+msgid "Velocidad de Animación"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:181
+msgid "Segundos por ciclo de animación"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:187
+msgid "Intensidad del Desenfoque"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:207
+msgid "Configuración del Contenedor"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:215
+msgid "Altura Mínima"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:236
+msgid "Relleno"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:255
+msgid "Alineación"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:260
+msgid "Izquierda"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:264
+msgid "Centro"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:268
+msgid "Derecha"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:280
+msgid "Radio del Borde"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:294
+msgid "Tipografía"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:304
+msgid "Color del Texto"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:328
+msgid "Avanzado"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:336
+msgid "Pausar al Pasar el Ratón"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:338 widgets/watercolor-container-widget.php:339
+msgid "Sí"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:339
+msgid "No"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:347
+msgid "Modo de Mezcla"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:351
+msgid "Normal"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:352
+msgid "Multiplicar"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:353
+msgid "Pantalla"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:354
+msgid "Superponer"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:355
+msgid "Luz Suave"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:364
+msgid "-- Seleccionar --"
+msgstr ""
+
+#: widgets/watercolor-container-widget.php:652
+msgid "La plantilla se mostrará aquí"
 msgstr ""

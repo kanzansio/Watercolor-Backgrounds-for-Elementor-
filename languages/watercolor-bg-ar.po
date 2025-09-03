@@ -1,9 +1,8 @@
 # Arabic translation for Watercolor Backgrounds for Elementor
 # Copyright (C) 2025 Watercolor Backgrounds for Elementor
-# This file is distributed under the same license as the Watercolor Backgrounds for Elementor package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Watercolor Backgrounds for Elementor 3.0.0\n"
+"Project-Id-Version: Watercolor Backgrounds for Elementor 4.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/watercolor-backgrounds\n"
 "POT-Creation-Date: 2025-01-01 12:00+0000\n"
 "PO-Revision-Date: 2025-01-01 12:00+0000\n"
@@ -14,92 +13,165 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Generator: Poedit 3.0\n"
 
-#: watercolor-backgrounds.php:84
-msgid "🎨 Fondo de Acuarela"
-msgstr "🎨 خلفية مائية"
-
-#: watercolor-backgrounds.php:91
-msgid "Activar Fondo de Acuarela"
-msgstr "تفعيل الخلفية المائية"
-
-#: watercolor-backgrounds.php:93
-msgid "Sí"
-msgstr "نعم"
-
-#: watercolor-backgrounds.php:94
-msgid "No"
-msgstr "لا"
-
-#: watercolor-backgrounds.php:104
-msgid "Tipo de Efecto"
-msgstr "نوع التأثير"
-
-#: watercolor-backgrounds.php:108
-msgid "💧 Acuarela"
-msgstr "💧 ألوان مائية"
-
-#: watercolor-backgrounds.php:109
-msgid "🌊 Barrido"
-msgstr "🌊 مسح"
-
-#: watercolor-backgrounds.php:120
-msgid "🎨 Colores"
-msgstr "🎨 الألوان"
-
-#: watercolor-backgrounds.php:131
-msgid "Color de Fondo Base"
-msgstr "لون الخلفية الأساسي"
-
-#: watercolor-backgrounds.php:145
-msgid "Color Principal"
-msgstr "اللون الأساسي"
-
-#: watercolor-backgrounds.php:159
-msgid "Color Secundario"
-msgstr "اللون الثانوي"
-
-#: watercolor-backgrounds.php:173
-msgid "⚙️ Configuración"
-msgstr "⚙️ الإعدادات"
-
-#: watercolor-backgrounds.php:184
-msgid "Opacidad"
-msgstr "العتامة"
-
-#: watercolor-backgrounds.php:206
-msgid "Velocidad de Animación"
-msgstr "سرعة الحركة"
-
-#: watercolor-backgrounds.php:225
-msgid "Intensidad del Desenfoque"
-msgstr "شدة التمويه"
-
-#: watercolor-backgrounds.php:309
-msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgid "\"%1$s\" requiere \"%2$s\" para ser instalado y activado."
 msgstr "\"%1$s\" يتطلب تثبيت وتفعيل \"%2$s\"."
 
-#: watercolor-backgrounds.php:310
 msgid "Watercolor Backgrounds for Elementor"
 msgstr "خلفيات مائية لـ Elementor"
 
-#: watercolor-backgrounds.php:311
 msgid "Elementor"
 msgstr "Elementor"
 
-#: watercolor-backgrounds.php:323
-msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgid "\"%1$s\" requiere \"%2$s\" versión %3$s o superior."
 msgstr "\"%1$s\" يتطلب \"%2$s\" الإصدار %3$s أو أحدث."
 
-#: watercolor-backgrounds.php:339
 msgid "Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero."
 msgstr "يتطلب هذا البرنامج المساعد Elementor للعمل. يرجى تثبيت وتفعيل Elementor أولاً."
 
-#: watercolor-backgrounds.php:340
 msgid "Plugin Activation Error"
 msgstr "خطأ في تفعيل البرنامج المساعد"
 
-#: watercolor-backgrounds.php:349
-msgid "Configurar en Elementor"
-msgstr "التكوين في Elementor"
+msgid "Abrir Elementor"
+msgstr "افتح Elementor"
+
+msgid "🎨 Contenedor Acuarela"
+msgstr "🎨 حاوية مائية"
+
+msgid "Contenido"
+msgstr "المحتوى"
+
+msgid "Tipo de Contenido"
+msgstr "نوع المحتوى"
+
+msgid "Texto"
+msgstr "نص"
+
+msgid "Plantilla Guardada"
+msgstr "قالب محفوظ"
+
+msgid "Sin Contenido"
+msgstr "بدون محتوى"
+
+msgid "Contenido del contenedor acuarela"
+msgstr "محتوى الحاوية المائية"
+
+msgid "Seleccionar Plantilla"
+msgstr "اختر القالب"
+
+msgid "🎨 Efecto Acuarela"
+msgstr "🎨 تأثير مائي"
+
+msgid "Tipo de Efecto"
+msgstr "نوع التأثير"
+
+msgid "💧 Acuarela"
+msgstr "💧 ألوان مائية"
+
+msgid "🌊 Barrido"
+msgstr "🌊 مسح"
+
+msgid "Preset de Colores"
+msgstr "إعدادات الألوان المسبقة"
+
+msgid "Personalizado"
+msgstr "مخصص"
+
+msgid "🌊 Océano"
+msgstr "🌊 محيط"
+
+msgid "🌅 Atardecer"
+msgstr "🌅 غروب الشمس"
+
+msgid "🌲 Bosque"
+msgstr "🌲 غابة"
+
+msgid "💜 Lavanda"
+msgstr "💜 لافندر"
+
+msgid "Color de Fondo Base"
+msgstr "لون الخلفية الأساسي"
+
+msgid "Color Principal"
+msgstr "اللون الأساسي"
+
+msgid "Color Secundario"
+msgstr "اللون الثانوي"
+
+msgid "Opacidad"
+msgstr "العتامة"
+
+msgid "Velocidad de Animación"
+msgstr "سرعة الحركة"
+
+msgid "Segundos por ciclo de animación"
+msgstr "ثواني لكل دورة حركة"
+
+msgid "Intensidad del Desenfoque"
+msgstr "شدة التمويه"
+
+msgid "Configuración del Contenedor"
+msgstr "إعدادات الحاوية"
+
+msgid "Altura Mínima"
+msgstr "الحد الأدنى للارتفاع"
+
+msgid "Relleno"
+msgstr "الحشو"
+
+msgid "Alineación"
+msgstr "المحاذاة"
+
+msgid "Izquierda"
+msgstr "يسار"
+
+msgid "Centro"
+msgstr "وسط"
+
+msgid "Derecha"
+msgstr "يمين"
+
+msgid "Radio del Borde"
+msgstr "نصف قطر الحد"
+
+msgid "Tipografía"
+msgstr "الطباعة"
+
+msgid "Color del Texto"
+msgstr "لون النص"
+
+msgid "Avanzado"
+msgstr "متقدم"
+
+msgid "Pausar al Pasar el Ratón"
+msgstr "إيقاف مؤقت عند التمرير"
+
+msgid "Sí"
+msgstr "نعم"
+
+msgid "No"
+msgstr "لا"
+
+msgid "Modo de Mezcla"
+msgstr "وضع المزج"
+
+msgid "Normal"
+msgstr "عادي"
+
+msgid "Multiplicar"
+msgstr "ضرب"
+
+msgid "Pantalla"
+msgstr "شاشة"
+
+msgid "Superponer"
+msgstr "تراكب"
+
+msgid "Luz Suave"
+msgstr "ضوء ناعم"
+
+msgid "-- Seleccionar --"
+msgstr "-- اختر --"
+
+msgid "La plantilla se mostrará aquí"
+msgstr "سيتم عرض القالب هنا"

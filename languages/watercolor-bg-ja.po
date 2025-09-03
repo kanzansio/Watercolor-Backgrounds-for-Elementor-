@@ -1,4 +1,4 @@
-# Chinese (Simplified) translation for Watercolor Backgrounds for Elementor
+# Japanese translation for Watercolor Backgrounds for Elementor
 # Copyright (C) 2025 Watercolor Backgrounds for Elementor
 msgid ""
 msgstr ""
@@ -7,171 +7,131 @@ msgstr ""
 "POT-Creation-Date: 2025-01-01 12:00+0000\n"
 "PO-Revision-Date: 2025-01-01 12:00+0000\n"
 "Last-Translator: \n"
-"Language-Team: Chinese (Simplified)\n"
-"Language: zh_CN\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "\"%1$s\" requiere \"%2$s\" para ser instalado y activado."
-msgstr "\"%1$s\" 需要安装并激活 \"%2$s\"。"
+msgstr "\"%1$s\" は \"%2$s\" をインストールして有効化する必要があります。"
 
 msgid "Watercolor Backgrounds for Elementor"
-msgstr "Elementor 水彩背景"
+msgstr "Elementor用水彩背景"
 
 msgid "Elementor"
 msgstr "Elementor"
 
 msgid "\"%1$s\" requiere \"%2$s\" versión %3$s o superior."
-msgstr "\"%1$s\" 需要 \"%2$s\" 版本 %3$s 或更高。"
+msgstr "\"%1$s\" は \"%2$s\" バージョン %3$s 以降が必要です。"
 
 msgid "Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero."
-msgstr "此插件需要 Elementor 才能运行。请先安装并激活 Elementor。"
+msgstr "このプラグインはElementorが必要です。まずElementorをインストールして有効化してください。"
 
 msgid "Plugin Activation Error"
-msgstr "插件激活错误"
+msgstr "プラグイン有効化エラー"
 
 msgid "Abrir Elementor"
-msgstr "打开 Elementor"
+msgstr "Elementorを開く"
 
 msgid "🎨 Contenedor Acuarela"
-msgstr "🎨 水彩容器"
+msgstr "🎨 水彩コンテナ"
 
 msgid "Contenido"
-msgstr "内容"
+msgstr "コンテンツ"
 
 msgid "Tipo de Contenido"
-msgstr "内容类型"
+msgstr "コンテンツタイプ"
 
 msgid "Texto"
-msgstr "文本"
+msgstr "テキスト"
 
 msgid "Plantilla Guardada"
-msgstr "保存的模板"
+msgstr "保存されたテンプレート"
 
 msgid "Sin Contenido"
-msgstr "无内容"
+msgstr "コンテンツなし"
 
 msgid "Contenido del contenedor acuarela"
-msgstr "水彩容器内容"
+msgstr "水彩コンテナのコンテンツ"
 
 msgid "Seleccionar Plantilla"
-msgstr "选择模板"
+msgstr "テンプレートを選択"
 
 msgid "🎨 Efecto Acuarela"
-msgstr "🎨 水彩效果"
+msgstr "🎨 水彩効果"
 
 msgid "Tipo de Efecto"
-msgstr "效果类型"
+msgstr "効果タイプ"
 
 msgid "💧 Acuarela"
 msgstr "💧 水彩"
 
 msgid "🌊 Barrido"
-msgstr "🌊 扫描"
+msgstr "🌊 スイープ"
 
 msgid "Preset de Colores"
-msgstr "颜色预设"
+msgstr "カラープリセット"
 
 msgid "Personalizado"
-msgstr "自定义"
+msgstr "カスタム"
 
 msgid "🌊 Océano"
-msgstr "🌊 海洋"
+msgstr "🌊 海"
 
 msgid "🌅 Atardecer"
-msgstr "🌅 日落"
+msgstr "🌅 夕日"
 
 msgid "🌲 Bosque"
-msgstr "🌲 森林"
+msgstr "🌲 森"
 
 msgid "💜 Lavanda"
-msgstr "💜 薰衣草"
+msgstr "💜 ラベンダー"
 
 msgid "Color de Fondo Base"
-msgstr "基础背景颜色"
+msgstr "ベース背景色"
 
 msgid "Color Principal"
-msgstr "主要颜色"
+msgstr "プライマリカラー"
 
 msgid "Color Secundario"
-msgstr "次要颜色"
+msgstr "セカンダリカラー"
 
 msgid "Opacidad"
 msgstr "不透明度"
 
 msgid "Velocidad de Animación"
-msgstr "动画速度"
+msgstr "アニメーション速度"
 
 msgid "Segundos por ciclo de animación"
-msgstr "每个动画周期的秒数"
+msgstr "アニメーションサイクルごとの秒数"
 
 msgid "Intensidad del Desenfoque"
-msgstr "模糊强度"
+msgstr "ぼかしの強度"
 
 msgid "Configuración del Contenedor"
-msgstr "容器设置"
+msgstr "コンテナ設定"
 
 msgid "Altura Mínima"
-msgstr "最小高度"
+msgstr "最小高さ"
 
 msgid "Relleno"
-msgstr "内边距"
+msgstr "パディング"
 
 msgid "Alineación"
-msgstr "对齐"
+msgstr "配置"
 
 msgid "Izquierda"
 msgstr "左"
 
 msgid "Centro"
-msgstr "中"
+msgstr "中央"
 
 msgid "Derecha"
 msgstr "右"
 
 msgid "Radio del Borde"
-msgstr "边框半径"
+msgstr "境界線の半径"
 
 msgid "Tipografía"
-msgstr "排版"
-
-msgid "Color del Texto"
-msgstr "文本颜色"
-
-msgid "Avanzado"
-msgstr "高级"
-
-msgid "Pausar al Pasar el Ratón"
-msgstr "悬停时暂停"
-
-msgid "Sí"
-msgstr "是"
-
-msgid "No"
-msgstr "否"
-
-msgid "Modo de Mezcla"
-msgstr "混合模式"
-
-msgid "Normal"
-msgstr "正常"
-
-msgid "Multiplicar"
-msgstr "正片叠底"
-
-msgid "Pantalla"
-msgstr "滤色"
-
-msgid "Superponer"
-msgstr "叠加"
-
-msgid "Luz Suave"
-msgstr "柔光"
-
-msgid "-- Seleccionar --"
-msgstr "-- 选择 --"
-
-msgid "La plantilla se mostrará aquí"
-msgstr "模板将在此处显示"

@@ -1,9 +1,8 @@
 # English translation for Watercolor Backgrounds for Elementor
 # Copyright (C) 2025 Watercolor Backgrounds for Elementor
-# This file is distributed under the same license as the Watercolor Backgrounds for Elementor package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Watercolor Backgrounds for Elementor 3.0.0\n"
+"Project-Id-Version: Watercolor Backgrounds for Elementor 4.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/watercolor-backgrounds\n"
 "POT-Creation-Date: 2025-01-01 12:00+0000\n"
 "PO-Revision-Date: 2025-01-01 12:00+0000\n"
@@ -14,92 +13,165 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
 
-#: watercolor-backgrounds.php:84
-msgid "🎨 Fondo de Acuarela"
-msgstr "🎨 Watercolor Background"
-
-#: watercolor-backgrounds.php:91
-msgid "Activar Fondo de Acuarela"
-msgstr "Enable Watercolor Background"
-
-#: watercolor-backgrounds.php:93
-msgid "Sí"
-msgstr "Yes"
-
-#: watercolor-backgrounds.php:94
-msgid "No"
-msgstr "No"
-
-#: watercolor-backgrounds.php:104
-msgid "Tipo de Efecto"
-msgstr "Effect Type"
-
-#: watercolor-backgrounds.php:108
-msgid "💧 Acuarela"
-msgstr "💧 Watercolor"
-
-#: watercolor-backgrounds.php:109
-msgid "🌊 Barrido"
-msgstr "🌊 Sweep"
-
-#: watercolor-backgrounds.php:120
-msgid "🎨 Colores"
-msgstr "🎨 Colors"
-
-#: watercolor-backgrounds.php:131
-msgid "Color de Fondo Base"
-msgstr "Base Background Color"
-
-#: watercolor-backgrounds.php:145
-msgid "Color Principal"
-msgstr "Primary Color"
-
-#: watercolor-backgrounds.php:159
-msgid "Color Secundario"
-msgstr "Secondary Color"
-
-#: watercolor-backgrounds.php:173
-msgid "⚙️ Configuración"
-msgstr "⚙️ Settings"
-
-#: watercolor-backgrounds.php:184
-msgid "Opacidad"
-msgstr "Opacity"
-
-#: watercolor-backgrounds.php:206
-msgid "Velocidad de Animación"
-msgstr "Animation Speed"
-
-#: watercolor-backgrounds.php:225
-msgid "Intensidad del Desenfoque"
-msgstr "Blur Intensity"
-
-#: watercolor-backgrounds.php:309
-msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgid "\"%1$s\" requiere \"%2$s\" para ser instalado y activado."
 msgstr "\"%1$s\" requires \"%2$s\" to be installed and activated."
 
-#: watercolor-backgrounds.php:310
 msgid "Watercolor Backgrounds for Elementor"
 msgstr "Watercolor Backgrounds for Elementor"
 
-#: watercolor-backgrounds.php:311
 msgid "Elementor"
 msgstr "Elementor"
 
-#: watercolor-backgrounds.php:323
-msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgid "\"%1$s\" requiere \"%2$s\" versión %3$s o superior."
 msgstr "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 
-#: watercolor-backgrounds.php:339
 msgid "Este plugin requiere Elementor para funcionar. Por favor instala y activa Elementor primero."
 msgstr "This plugin requires Elementor to work. Please install and activate Elementor first."
 
-#: watercolor-backgrounds.php:340
 msgid "Plugin Activation Error"
 msgstr "Plugin Activation Error"
 
-#: watercolor-backgrounds.php:349
-msgid "Configurar en Elementor"
-msgstr "Configure in Elementor"
+msgid "Abrir Elementor"
+msgstr "Open Elementor"
+
+msgid "🎨 Contenedor Acuarela"
+msgstr "🎨 Watercolor Container"
+
+msgid "Contenido"
+msgstr "Content"
+
+msgid "Tipo de Contenido"
+msgstr "Content Type"
+
+msgid "Texto"
+msgstr "Text"
+
+msgid "Plantilla Guardada"
+msgstr "Saved Template"
+
+msgid "Sin Contenido"
+msgstr "No Content"
+
+msgid "Contenido del contenedor acuarela"
+msgstr "Watercolor container content"
+
+msgid "Seleccionar Plantilla"
+msgstr "Select Template"
+
+msgid "🎨 Efecto Acuarela"
+msgstr "🎨 Watercolor Effect"
+
+msgid "Tipo de Efecto"
+msgstr "Effect Type"
+
+msgid "💧 Acuarela"
+msgstr "💧 Watercolor"
+
+msgid "🌊 Barrido"
+msgstr "🌊 Sweep"
+
+msgid "Preset de Colores"
+msgstr "Color Preset"
+
+msgid "Personalizado"
+msgstr "Custom"
+
+msgid "🌊 Océano"
+msgstr "🌊 Ocean"
+
+msgid "🌅 Atardecer"
+msgstr "🌅 Sunset"
+
+msgid "🌲 Bosque"
+msgstr "🌲 Forest"
+
+msgid "💜 Lavanda"
+msgstr "💜 Lavender"
+
+msgid "Color de Fondo Base"
+msgstr "Base Background Color"
+
+msgid "Color Principal"
+msgstr "Primary Color"
+
+msgid "Color Secundario"
+msgstr "Secondary Color"
+
+msgid "Opacidad"
+msgstr "Opacity"
+
+msgid "Velocidad de Animación"
+msgstr "Animation Speed"
+
+msgid "Segundos por ciclo de animación"
+msgstr "Seconds per animation cycle"
+
+msgid "Intensidad del Desenfoque"
+msgstr "Blur Intensity"
+
+msgid "Configuración del Contenedor"
+msgstr "Container Settings"
+
+msgid "Altura Mínima"
+msgstr "Minimum Height"
+
+msgid "Relleno"
+msgstr "Padding"
+
+msgid "Alineación"
+msgstr "Alignment"
+
+msgid "Izquierda"
+msgstr "Left"
+
+msgid "Centro"
+msgstr "Center"
+
+msgid "Derecha"
+msgstr "Right"
+
+msgid "Radio del Borde"
+msgstr "Border Radius"
+
+msgid "Tipografía"
+msgstr "Typography"
+
+msgid "Color del Texto"
+msgstr "Text Color"
+
+msgid "Avanzado"
+msgstr "Advanced"
+
+msgid "Pausar al Pasar el Ratón"
+msgstr "Pause on Hover"
+
+msgid "Sí"
+msgstr "Yes"
+
+msgid "No"
+msgstr "No"
+
+msgid "Modo de Mezcla"
+msgstr "Blend Mode"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Multiplicar"
+msgstr "Multiply"
+
+msgid "Pantalla"
+msgstr "Screen"
+
+msgid "Superponer"
+msgstr "Overlay"
+
+msgid "Luz Suave"
+msgstr "Soft Light"
+
+msgid "-- Seleccionar --"
+msgstr "-- Select --"
+
+msgid "La plantilla se mostrará aquí"
+msgstr "Template will be displayed here"
